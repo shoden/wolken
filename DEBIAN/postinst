@@ -1,0 +1,31 @@
+#!/bin/sh
+
+set -e
+
+GAL_PATH="/var/www/wolken/gal" # Ruta de la galería
+IMG_PATH="/var/www/wolken/img" # Ruta de las capturas
+IMG_LINK=$GAL_PATH"/wolken"    # Enlace a las capturas
+
+CRON="/etc/cron.d/wolken"
+XDG="/etc/xdg/wolken/wolken.conf"
+
+case "$1" in
+configure)
+    #echo "Instalando/actualizando paquete... (después)"
+    if [ -f $CRON ]; then
+      echo "Cambiando permisos al archivo cron..."
+      chown root:root $CRON
+    else
+      echo "Aviso: El archivo cron no existe."
+    fi
+
+    if [ -f $XDG ]; then
+      echo "Cambiando permisos al archivo XDG..."
+      chown -R wolken:wolken $(dirname $XDG)
+    else
+      echo "Aviso: El archivo XDG no existe."
+    fi
+  ;;
+esac
+
+exit 0

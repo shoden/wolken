@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+GAL_PATH="/var/www/wolken/gal" # Ruta de la galería
+IMG_PATH="/var/www/wolken/img" # Ruta de las capturas
+IMG_LINK=$GAL_PATH"/wolken"    # Enlace a las capturas
+
+case "$1" in
+remove)
+  #echo "Eliminando paquete... (antes)"
+  echo "Eliminando enlace a las capturas..."
+  rm -f $IMG_LINK
+  ;;
+upgrade)
+  #echo "Eliminando versión anterior... (antes)"
+  ;;
+esac
+
+exit 0

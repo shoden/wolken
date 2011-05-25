@@ -1,0 +1,8 @@
+# /etc/cron.d/wolken: contrab entries for wolken
+
+# Llamada a wolken cada 10 minutos desde las 7:00 hasta las 20:00
+#0,10,20,30,40,50 7,8,9,10,11,12,13,14,15,16,17,18,19 * * * wolken /usr/bin/wolken
+#0 20 * * * wolken /usr/bin/wolken
+
+# Eliminar los ZIP creados desde la aplicación web
+#0 05 * * * wolken /bin/rm -f /tmp/wolken*.zip

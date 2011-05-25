@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+install)
+    #echo "Instalando paquete... (antes)"
+    # Usuario wolken. Si no existe, lo creamos
+    W=$(cat /etc/passwd | grep wolken | wc -l) 
+    if [ $W -eq 0 ]; then 
+      echo "Creando usuario wolken..."
+      useradd wolken -d /var/www/wolken
+      usermod -G video,plugdev wolken
+    else
+      echo "Aviso: No se crea el usuario wolken porque ya existe."
+    fi
+  ;;
+upgrade)
+  #echo "Actualizando paquete... (antes)"
+  ;;
+esac
+
+exit 0
+

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+remove)
+  #echo "Eliminando paquete... (después)"
+  W=$(cat /etc/passwd | grep wolken | wc -l) 
+  if [ $W -eq 1 ]; then 
+    echo "Eliminando usuario wolken..."
+    userdel wolken
+  else
+    echo "Aviso: El usuario wolken ya no existe."
+  fi
+  ;;
+upgrade)
+  #echo "Eliminando versión anterior... (después)"
+  ;;
+esac
+
+exit 0
