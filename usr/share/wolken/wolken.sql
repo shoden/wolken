@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 07-04-2011 a las 18:08:22
+-- Tiempo de generación: 06-07-2011 a las 09:20:49
 -- Versión del servidor: 5.1.41
--- Versión de PHP: 5.3.2-1ubuntu4.7
+-- Versión de PHP: 5.3.2-1ubuntu4.9
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -16,7 +16,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `wolken`
+-- Base de datos: `nubes`
 --
 
 -- --------------------------------------------------------
@@ -77,6 +77,27 @@ INSERT INTO `parametros` (`id`, `en`, `es`, `min`, `max`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `roi`
+--
+
+CREATE TABLE IF NOT EXISTS `roi` (
+  `habilitado` tinyint(1) NOT NULL,
+  `x1` smallint(5) unsigned NOT NULL,
+  `x2` smallint(5) unsigned NOT NULL,
+  `y1` smallint(5) unsigned NOT NULL,
+  `y2` smallint(5) unsigned NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `roi`
+--
+
+INSERT INTO `roi` (`habilitado`, `x1`, `x2`, `y1`, `y2`) VALUES
+(0, 163, 563, 156, 305);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tomas`
 --
 
@@ -99,16 +120,16 @@ CREATE TABLE IF NOT EXISTS `tomas` (
 --
 
 INSERT INTO `tomas` (`id`, `habilitado`, `agudeza`, `brillo`, `contraste`, `exposicion`, `gamma`, `ganancia`, `saturacion`, `tonalidad`) VALUES
-(1, 1, '2', '0', '32', '1', '100', '0', '54', '0'),
-(2, 1, '2', '0', '32', '2', '100', '0', '54', '0'),
-(3, 1, '2', '0', '32', '3', '100', '0', '54', '0'),
-(4, 1, '2', '0', '32', '4', '100', '0', '54', '0'),
-(5, 1, '2', '0', '32', '5', '100', '0', '54', '0'),
-(6, 1, '2', '0', '32', '6', '100', '0', '54', '0'),
-(7, 1, '2', '0', '32', '7', '100', '0', '54', '0'),
-(8, 1, '2', '0', '32', '8', '100', '0', '54', '0'),
-(9, 1, '2', '0', '32', '9', '100', '0', '54', '0'),
-(10, 1, '2', '0', '32', '10', '100', '0', '54', '0');
+(1, 1, '2', '0', '32', '14', '100', '0', '54', '0'),
+(2, 1, '2', '0', '32', '150', '100', '0', '54', '0'),
+(3, 1, '2', '0', '32', '160', '100', '0', '54', '0'),
+(4, 1, '2', '0', '32', '170', '100', '0', '54', '0'),
+(5, 1, '2', '0', '32', '180', '100', '0', '54', '0'),
+(6, 1, '2', '0', '32', '190', '100', '0', '54', '0'),
+(7, 1, '2', '0', '32', '200', '100', '0', '54', '0'),
+(8, 1, '2', '0', '32', '220', '100', '0', '54', '0'),
+(9, 1, '2', '0', '32', '240', '100', '0', '54', '0'),
+(10, 1, '2', '0', '32', '260', '100', '0', '54', '0');
 
 -- --------------------------------------------------------
 
@@ -134,4 +155,4 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `username`, `password`, `email`, `cookie_pass`, `actcode`, `rank`, `lastactive`, `lastlogin`) VALUES
-(1, 'juan', '1f8c82f29cf9fe14ecaaef2f4e90e44a', '', '952b6f35a08a8f38a613f8794317693c', '', '', '2011-04-07 18:05:10', '2011-04-07 18:05:10');
+(1, 'wolken', 'b1974a613f9d3a189fe36fc914e14497', '', '952b6f35a08a8f38a613f8794317693c', '', '', '2011-07-06 09:19:27', '2011-07-06 09:19:27');
