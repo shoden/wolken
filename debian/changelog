@@ -1,9 +1,15 @@
+wolken (0.8) unstable; urgency=low
+
+  * CMake configuration file 
+
+ -- Juan Roldan Ruiz <juan@shoden.es>  Fri, 02 Sep 2011 20:51:54 +0200
+
 wolken (0.7) unstable; urgency=low
 
-  * licencias Javascript
-  * leer configuración de /etc/xdg/wolken/wolken.conf
-  * mejoras CSS
-  * cargando desde la lista de capturas
-  * fondo de login
+  * Javascript licenses
+  * Read configuration from /etc/xdg/wolken/wolken.conf
+  * Some CSS improvements
+  * Loading from capture listing
+  * Login background
 
  -- Juan Roldan Ruiz <juan@shoden.es>  Thu, 19 May 2011 10:55:53 +0200
