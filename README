@@ -1,0 +1,31 @@
+DESCRIPTION (english version is coming soon...)
+
+  Software del proyecto Sistema de observación de nubes
+  del departamento de Física Aplicada de la Universidad de Córdoba.
+
+  Consta de:
+    - Aplicación de captura de imágenes
+    - Aplicación web para la visualización de las capturas realizadas
+    - Archivo cron para la automatización de capturas
+    - Script SQL para la inicialización manual de la base de datos
+    - Archivo de configuración XDG
+
+  Tras la instalación del paquete deberán seguirse estos pasos para
+  el correcto funcionamiento de este software:
+    - Crear una base de datos MySQL e importar el script SQL ubicado en
+     /usr/share/wolken/wolken/wolken.sql
+    - Editar el archivo de configuración /etc/xdg/wolken/wolken.conf
+    - Editar el fichero /etc/cron.d/wolken para personalizar la
+     automatización de capturas.
+    - Reiniciar cron: sudo service cron restart
+
+  ¡Aviso!
+  Este paquete creará automáticamennte el usuario wolken en el sistema y
+  lo añadirá a los grupos correspondientes para poder tener acceso a los
+  dispositivos de vídeo. Este usuario será eliminado automáticamente al
+  desinstalar este paquete.
+
+
+FURTHER INFO
+
+  https://github.com/shoden/wolken
