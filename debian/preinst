@@ -12,7 +12,7 @@ install)
       useradd wolken -d /var/www/wolken
       usermod -G video,plugdev wolken
     else
-      echo "Aviso: No se crea el usuario wolken porque ya existe."
+      echo "Aviso: El usuario wolken ya existe."
     fi
   ;;
 upgrade)

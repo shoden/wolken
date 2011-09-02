@@ -9,8 +9,10 @@ IMG_LINK=$GAL_PATH"/wolken"    # Enlace a las capturas
 case "$1" in
 remove)
   #echo "Eliminando paquete... (antes)"
-  echo "Eliminando enlace a las capturas..."
-  rm -f $IMG_LINK
+  if [ -e $IMG_LINK ]; then
+    echo "Eliminando enlace a las capturas..."
+    rm -f $IMG_LINK
+  fi
   ;;
 upgrade)
   #echo "Eliminando versión anterior... (antes)"
