@@ -1,2 +1,6 @@
 obj-*-linux-gnu
 *.swp
+debian/files
+debian/wolken.debhelper.log
+debian/wolken.substvars
+debian/wolken
