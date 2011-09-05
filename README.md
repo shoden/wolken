@@ -32,7 +32,7 @@
 
 ## Concept
 
-![Alt text](http://shoden.es/img/wolken_diagram.png "Wolken Diagram")
+![Alt text](http://shoden.es/img/wolken_diagram-en.png "Wolken Diagram")
 
 
 ## Software
