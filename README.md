@@ -44,7 +44,9 @@
   * wolken-gallery[3]: Web application for viewing captured images
 
   [1] <https://github.com/shoden/wolken>
+
   [2] <https://github.com/shoden/wolken-capture>
+
   [3] <https://github.com/shoden/wolken-gallery>
 
 

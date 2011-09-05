@@ -2,20 +2,20 @@
 
 set -e
 
-GAL_PATH="/var/www/wolken/gal" # Ruta de la galería
-IMG_PATH="/var/www/wolken/img" # Ruta de las capturas
-IMG_LINK=$GAL_PATH"/wolken"    # Enlace a las capturas
+GAL_PATH="/var/www/wolken/gal" # Gallery path
+IMG_PATH="/var/www/wolken/img" # Captures path
+IMG_LINK=$GAL_PATH"/wolken"    # Soft link to captures
 
 case "$1" in
 remove)
-  #echo "Eliminando paquete... (antes)"
+  #echo "Removing package... (before)"
   if [ -e $IMG_LINK ]; then
-    echo "Eliminando enlace a las capturas..."
+    echo "Removing link to captures..."
     rm -f $IMG_LINK
   fi
   ;;
 upgrade)
-  #echo "Eliminando versión anterior... (antes)"
+  #echo "Removing previous version... (before)"
   ;;
 esac
 

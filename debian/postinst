@@ -3,26 +3,26 @@
 set -e
 
 XDG="/etc/xdg/wolken/wolken.conf"
-GAL_PATH="/var/www/wolken/gal" # Ruta de la galería
-IMG_PATH="/var/www/wolken/img" # Ruta de las capturas
-IMG_LINK=$GAL_PATH"/wolken"    # Enlace a las capturas
+GAL_PATH="/var/www/wolken/gal" # Gallery path
+IMG_PATH="/var/www/wolken/img" # Captures path
+IMG_LINK=$GAL_PATH"/wolken"    # Soft link to captures
 
 case "$1" in
 configure)
-    #echo "Instalando/actualizando paquete... (después)"
+  #echo "Instaling/updating package... (after)"
     if [ -f $XDG ]; then
-      echo "Cambiando permisos al archivo XDG..."
+      echo "Changing privileges to XDG file..."
       chown -R wolken:wolken $(dirname $XDG)
       chmod 700 $(dirname $XDG)
       chmod 600 $XDG
     else
-      echo "Aviso: El archivo XDG no existe."
+      echo "Warning: XDG doesn't exists."
     fi
     
     if [ -d $GAL_PATH -a -d $IMG_PATH -a ! -e $IMG_LINK ]; then
       ln -fs $IMG_LINK $GAL_PATH
     else
-      echo "Aviso: No se pudo crear el enlace a las capturas."
+      echo "Warning: Couldn't create link to captures."
     fi
   ;;
 esac

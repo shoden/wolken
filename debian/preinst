@@ -4,19 +4,18 @@ set -e
 
 case "$1" in
 install)
-    #echo "Instalando paquete... (antes)"
-    # Usuario wolken. Si no existe, lo creamos
+    #echo "Installing package... (before)"
     W=$(cat /etc/passwd | grep wolken | wc -l) 
     if [ $W -eq 0 ]; then 
-      echo "Creando usuario wolken..."
+      echo "Creating wolken user..."
       useradd wolken -d /var/www/wolken
       usermod -G video,plugdev wolken
     else
-      echo "Aviso: El usuario wolken ya existe."
+      echo "Warning: wolken user already exists."
     fi
   ;;
 upgrade)
-  #echo "Actualizando paquete... (antes)"
+  #echo "Updating package... (before)"
   ;;
 esac
 
