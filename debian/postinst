@@ -27,4 +27,6 @@ configure)
   ;;
 esac
 
+#DEBHELPER#
+
 exit 0
