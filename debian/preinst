@@ -8,7 +8,7 @@ install)
     W=$(cat /etc/passwd | grep wolken | wc -l) 
     if [ $W -eq 0 ]; then 
       echo "Creating wolken user..."
-      useradd wolken -d /var/www/wolken
+      useradd wolken --system
       usermod -G video,plugdev wolken
     else
       echo "Warning: wolken user already exists."
