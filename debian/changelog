@@ -1,10 +1,10 @@
-wolken (0.8) unstable; urgency=low
+wolken (0.8-1) unstable; urgency=low
 
   * CMake configuration file 
 
  -- Juan Roldan Ruiz <juan@shoden.es>  Fri, 02 Sep 2011 20:51:54 +0200
 
-wolken (0.7) unstable; urgency=low
+wolken (0.7-1) unstable; urgency=low
 
   * Javascript licenses
   * Read configuration from /etc/xdg/wolken/wolken.conf
